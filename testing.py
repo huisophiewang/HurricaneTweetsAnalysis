@@ -1,8 +1,20 @@
 import json
 import datetime
 
-dt = datetime.datetime.strptime('20161001', "%Y%m%d").date()
-print "test %s" % dt
-print type(str(dt))
-dt = dt + datetime.timedelta(days=1)
-print type(dt)
+import re
+# Lets create a pattern and extract some information with it
+regex = re.compile(r'http\S+')
+
+# result = regex.search("Hello World is the easiest")
+# if result:
+#     print result.start(), result.end()
+# 
+# for result in regex.findall("Hello World, Bonjour World"):
+#     print result
+
+#print regex.sub(r"\1 Earth", "Hello World! Hello beautiful World!")
+#print regex.sub(r"Earth", "This must b an April fools joke https://t.co/yxLbliw6Yw")
+
+#print re.sub(r'http\S+', '', "This must b an April fools joke https://t.co/yxLbliw6Yw")
+result = regex.sub('', "This must b an April fools joke https://t.co/yxLbliw6Yw")
+print result
