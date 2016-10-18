@@ -16,8 +16,7 @@ import re
 #print regex.sub(r"Earth", "This must b an April fools joke https://t.co/yxLbliw6Yw")
 
 #print re.sub(r'http\S+', '', "This must b an April fools joke https://t.co/yxLbliw6Yw")
-import nltk
-nltk.download()
+
 
 # from nltk.tokenize import word_tokenize
 #  
