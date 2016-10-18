@@ -12,7 +12,7 @@ access_token_secret = "JGZ4KNFiqPtYm1E5wAlXLMhzpqtA49Dk4ucXeYZ256PT5"
 consumer_key = "uGR6NQOLUIXmzSSuJFSFhbY3i"
 consumer_secret = "AeRZnA0ziRlNYSSQIjLyh84uObw9b2iiTghDPZukIwhjwsbH1H"
 
-fp_out = 'testing.json'
+fp_out = 'test_re.json'
 fp_err = 'HurricaneMatthew_error.txt'
 class MyListener(StreamListener):
 

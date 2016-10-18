@@ -46,6 +46,7 @@ def main():
     stop_terms = stopwords.words('english') + list(string.punctuation)
     # use lower case
     stop_terms += ['rt', 'in', 'matthew', 'hurricane', '#matthew']
+    dt = '0929'
     fp = os.path.join("search_matthew", "20160929", "20160929_00.txt")
     fr = open(fp)
     for line in fr.readlines():
