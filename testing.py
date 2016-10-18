@@ -3,7 +3,7 @@ import datetime
 
 import re
 # Lets create a pattern and extract some information with it
-regex = re.compile(r'http\S+')
+#regex = re.compile(r'http\S+')
 
 # result = regex.search("Hello World is the easiest")
 # if result:
@@ -16,5 +16,11 @@ regex = re.compile(r'http\S+')
 #print regex.sub(r"Earth", "This must b an April fools joke https://t.co/yxLbliw6Yw")
 
 #print re.sub(r'http\S+', '', "This must b an April fools joke https://t.co/yxLbliw6Yw")
-result = regex.sub('', "This must b an April fools joke https://t.co/yxLbliw6Yw")
-print result
+import nltk
+nltk.download()
+
+# from nltk.tokenize import word_tokenize
+#  
+# tweet = 'RT @marcobonzanini: just an example! :D http://example.com #NLP'
+# print(word_tokenize(tweet))
+# ['RT', '@', 'marcobonzanini', ':', 'just', 'an', 'example', '!', ':', 'D', 'http', ':', '//example.com', '#', 'NLP']
