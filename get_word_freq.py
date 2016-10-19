@@ -51,6 +51,8 @@ def get_freq(fps):
         fr = open(fp)
         for line in fr.readlines():
             line = re_remove_front.sub('', line[20:])
+            # retweets has this field "retweeted_status", the official way to recognize retweet
+            # it's easier and probabaly safe to filter using "RT @"
 #             if 'evacuation' in line and not line.startswith('RT'):
 #                 print line
             terms = preprocess(line)
