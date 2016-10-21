@@ -95,7 +95,7 @@ if __name__ == '__main__':
 #     pprint(preprocess(tweet))
 
     dates = ['0929', '0930', '1001', '1002', '1003', '1004', '1005', '1006', '1007', '1008', '1009', '1010']
-    dates = ['1001']
+    dates = ['1004']
     for dt in dates:
         print dt
         get_freq_by_day(dt)

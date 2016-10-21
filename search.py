@@ -84,7 +84,8 @@ def search(dt):
 
     
 if __name__ == '__main__': 
-    dates = ['20161010', '20161011']      
+    dates = ['20161013','20161014', '20161015', '20161016']     
+    dates = ['20161007'] 
     for dt in dates:
         search(dt)
 
