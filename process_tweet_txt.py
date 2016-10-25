@@ -1,4 +1,7 @@
 import os
+import re
+
+re_remove_front = re.compile(r'^@\S+: ')
 
 def process(mmdd, hh):
     txt_input =os.path.join('search_matthew','2016%s' % mmdd, '2016%s_%s.txt' % (mmdd, hh))
@@ -6,9 +9,12 @@ def process(mmdd, hh):
     
     count = 0
     for line in fr.readlines():
-        txt = line[20:]
-        if "Pat McCrory" in txt:
+        txt = re_remove_front.sub('', line[20:]).lower()
+        #if "Pat McCrory" in txt:
         #if "Nikki Haley" in txt:
+        #if "nathan deal" in txt:
+        if "rick scott" in txt:
+        #if "evacu" in txt and ("georgia" in txt):
             count += 1
             #print line.strip('\n')
     #print count
@@ -29,3 +35,6 @@ if __name__ == '__main__':
         for hr in hrs:
             daily_count += process(dt, hr)
         print daily_count
+        
+#         for hr in hrs:
+#             process(dt, hr)
