@@ -30,11 +30,9 @@ regex_str = [
 tokens_re = re.compile(r'('+'|'.join(regex_str)+')', re.VERBOSE | re.IGNORECASE)
 emoticon_re = re.compile(r'^'+emoticons_str+'$', re.VERBOSE | re.IGNORECASE)
  
-def tokenize(s):
-    return tokens_re.findall(s)
- 
-def preprocess(s, lowercase=False):
-    tokens = tokenize(s)
+
+def tokenize(s, lowercase=False):
+    tokens = tokens_re.findall(s)
     if lowercase:
         tokens = [token if emoticon_re.search(token) else token.lower() for token in tokens]
     return tokens
@@ -55,7 +53,7 @@ def get_freq(fps):
             # it's easier and probabaly safe to filter using "RT @"
 #             if 'evacuation' in line and not line.startswith('RT'):
 #                 print line
-            terms = preprocess(line)
+            terms = tokenize(line)
             for term in terms:
                 if term.lower() not in stop_terms:
                     terms_filtered.append(term)
