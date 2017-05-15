@@ -1,2 +1,0 @@
-from nltk.book import *
-
